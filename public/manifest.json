@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome App",
+  "description": "Chrome extension app demo",
+  "version": "0.0.4",
+  "author": "qileq",
+  "icons": {
+    "16": "logo192.png",
+    "32": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "action": {
+    "default_title": "Open the popup",
+    "default_popup": "login.html"
+  }
+}

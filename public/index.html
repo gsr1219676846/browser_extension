@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- CSS connection -->
+  <link rel="stylesheet" type="text/css" href="index.css" />
+  <!-- JS connection -->
+  <script src="https://apis.google.com/js/api.js"></script>
+</head>
+<body>
+<!-- Header -->
+<div class="highlight-section">
+  <h1>Foldr</h1>
+</div>
+
+<!-- Button container -->
+<div class="button-container">
+  <button onclick="showButtons('group1')">Library</button>
+  <button onclick="showButtons('group2')">Category</button>
+  <button onclick="showButtons('group3')">User</button>
+</div>
+
+<div class="gray-area">
+  <input type="file" id="file-input" title="Select a file to upload">
+  <button id="upload-button" title="Upload the selected file to Google Drive">Upload to Google Drive</button>
+  <button id="preview-button" title="Preview the uploaded file">Preview File</button>
+  <iframe id="preview-frame" style="width: 100%; height: 300px"></iframe>
+</div>
+
+</body>
+</html>
