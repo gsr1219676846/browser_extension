@@ -1,0 +1,55 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome App",
+  "description": "Chrome extension app demo",
+  "version": "0.0.6",
+  "author": "qileq",
+  "icons": {
+    "16": "logo192.png",
+    "32": "logo192.png",
+    "48": "logo192.png",
+    "128": "logo192.png"
+  },
+  "content_scripts":[
+    {
+      "all_frames": true,
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+
+
+  "action": {
+    "default_title": "Open the popup",
+    "default_popup": "login.html"
+
+  },
+
+
+  "web_accessible_resources": [
+    {
+      "resources": ["index.css", "img/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+
+  "permissions": [
+    "scripting",
+    "storage",
+    "tabs",
+    "activeTab",
+    "scripting",
+    "webNavigation",
+    "http://localhost:8080/",
+    "http://localhost:8080/loginsystem/*"
+  ]
+
+}
