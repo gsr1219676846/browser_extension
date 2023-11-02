@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="index.css" />
   <!-- JS connection -->
   <script src="upload.js"></script>
+  <script src="getFiles.js"></script>
+
 
 </head>
 <body>
@@ -23,8 +25,8 @@
 <div class="gray-area">
   <input type="file" id="file-input" title="Select a file to upload">
   <button id="upload-button" title="Upload the selected file to Google Drive">Upload to Google Drive</button>
-  <button id="preview-button" title="Preview the uploaded file">Preview File</button>
-  <iframe id="preview-frame" style="width: 100%; height: 300px"></iframe>
+  <div id="preview-frame" style="width: 100%; height: 300px; overflow-y: auto;"></div>
+
 </div>
 
 </body>

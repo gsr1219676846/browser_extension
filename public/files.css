@@ -1,0 +1,5 @@
+.file-content {
+    display: none;
+    padding: 10px;  // Add some padding for better appearance
+border: 1px solid #ddd;  // Optional: add a border for clear separation
+}

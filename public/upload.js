@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('upload-button').addEventListener('click', function() {
-        chrome.storage.local.get('username', function(data) {
-            var userInfo = localStorage.getItem('username');
-            if (userInfo && userInfo.first_name) {
+        // Get username from chrome.storage
+        chrome.storage.local.get(['username'], function(result) {
+            var username = result.username;
+            if (username) {
                 var fileInput = document.getElementById('file-input');
                 var file = fileInput.files[0];
                 if (file) {
                     var formData = new FormData();
                     formData.append("file", file);
-                    formData.append("username", userInfo.first_name);
+                    formData.append("username", username);
 
                     fetch('http://localhost:8080/loginsystem/upload.php', {
                         method: 'POST',
