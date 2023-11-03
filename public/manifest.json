@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Chrome App",
   "description": "Chrome extension app demo",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "author": "qileq",
   "icons": {
     "16": "logo192.png",
