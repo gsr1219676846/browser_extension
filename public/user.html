@@ -3,20 +3,22 @@
 
 <head>
     <!-- CSS connection -->
-<!--    <link rel="stylesheet" type="text/css" href=".css" />-->
+ <link rel="stylesheet" type="text/css" href="user.css" />
     <!-- JS connection -->
     <script src=""></script>
-    <style>
-        body, iframe {
-            margin: 0;
-            padding: 0;
-            width: 700px;
-            height: 700px;
-            border: none;
-        }
-    </style>
+
 </head>
 <body>
+<!-- Header -->
+<div class="highlight-section">
+    <h1>Foldr</h1>
+</div>
+
+<!-- Button container -->
+<div class="button-container">
+    <button onclick="showButtons('group1')"><a href="index.html">Books</a></button>
+    <button onclick="showButtons('group2')"><a href="user.html">User</a></button>
+</div>
 
 <iframe src="http://localhost:8080/loginsystem/index.php"></iframe>
 </body>
