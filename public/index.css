@@ -1,74 +1,102 @@
-/* Header */
-.highlight-section {
-    text-align: left;
-    background-color: #c7bad9;
-    color: #715696;
+/* Toggle Switch Style */
+.theme-switch {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+:root {
+    /* Light theme colors */
+    --background-color: #fff;
+    --text-color: #333;
+    --button-bg-color: #4a90e2;
+    --button-text-color: white;
+    --button-hover-bg-color: #357ab8;
+}
+
+[data-theme="dark"] {
+    /* Dark theme colors */
+    --background-color: #333;
+    --text-color: #fff;
+    --button-bg-color: #555;
+    --button-text-color: #ddd;
+    --button-hover-bg-color: #777;
 }
 
 body {
-    height: 600px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    /* ... rest of your body styles ... */
+}
+
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+    color: #333;
 }
 
-/* Button Container */
-.button-container {
-    display: flex;
-    justify-content: center;
+/* Header */
+.highlight-section {
+    text-align: center;
+    background-color: #4a90e2;
+    color: white;
+    padding: 20px 0;
 }
 
-.button-container button {
-    margin-right: 10px;
+/* Navigation */
+.nav-button {
+    display: inline-block;
+    margin: 10px;
     padding: 10px 20px;
-    background-color: #c7bad9;
-    color: #715696;
-    border: none;
+    background-color: #4a90e2;
+    color: white;
+    text-decoration: none;
     border-radius: 4px;
-    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
 }
 
-.button-container button:last-child {
-    margin-right: 0;
+.nav-button:hover {
+    background-color: #357ab8;
 }
 
 /* Gray Area */
-.button-container {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.button-container button {
-    margin-right: 10px;
-    padding: 10px 20px;
-    background-color: #c7bad9;
-    color: #715696;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.button-container button:last-child {
-    margin-right: 0;
+.gray-area {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
 }
 
 #file-input {
-    display: block;
     margin-bottom: 10px;
 }
 
-#upload-button,
-#preview-button {
-    margin-right: 10px;
+#upload-button {
     padding: 10px 20px;
-    background-color: #c7bad9;
-    color: #715696;
+    background-color: #4a90e2;
+    color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#upload-button:hover {
+    background-color: #357ab8;
 }
 
 #preview-frame {
     width: 100%;
-    height: 500px;
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    margin-top: 20px;
 }
 

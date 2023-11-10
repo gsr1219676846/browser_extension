@@ -5,7 +5,7 @@
     <!-- CSS connection -->
     <link rel="stylesheet" type="text/css" href="setting.css" />
     <!-- JS connection -->
-<!--    <script src=".js"></script>-->
+<script src="setting.js"></script>-->
 
 
 
@@ -13,15 +13,20 @@
 <body>
 <!-- Header -->
 <div class="highlight-section">
-    <h1>Foldr</h1>
+    <h1>Citation Browser Extention</h1>
 </div>
 
 <!-- Button container -->
-<div class="button-container">
-    <button onclick="showButtons('group1')"><a href="index.html">Books</a></button>
-    <button onclick="showButtons('group2')"><a href="user.html">User</a></button>
-</div>
+<!-- Button container -->
+<nav class="button-container">
+    <a href="index.html" class="nav-button">Books</a>
+    <a href="user.html" class="nav-button">User</a>
+    <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="theme-toggle" />
+        Toggle Dark/Light Mode
+    </label>
 
+</nav>
 <div class="gray-area">
 
     <button id="button" title="button">Change the frame</button>
