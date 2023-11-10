@@ -31,12 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
                         icon.title = file;
 
                         icon.addEventListener('click', function() {
-                            // Use chrome.windows.create() to open a new popup with the file content
+                            // 传递用户名和文件名
                             chrome.windows.create({
-                                url: 'file_display_page.html?file=' + encodeURIComponent(file),
+                                url: 'file_display_page.html?username=' + encodeURIComponent(username) + '&file=' + encodeURIComponent(file),
                                 type: 'popup',
-                                width: 400,  // Set your preferred width
-                                height: 600  // Set your preferred height
+                                width: 400,
+                                height: 600
                             });
                         });
 
@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Create a wrapper for the file icon and label
                         let fileContainer = document.createElement('div');
                         fileContainer.className = 'file-container';
+
 
                         // Create a label for the file name
                         let label = document.createElement('div');
@@ -59,11 +60,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Add click event listener for the fileContainer
                         fileContainer.addEventListener('click', function() {
                             var content = label; // You can modify this to target a specific element if needed
-                            if (content.style.display === "none") {
-                                content.style.display = "block";
-                            } else {
-                                content.style.display = "none";
-                            }
+                            // if (content.style.display === "none") {
+                            //     content.style.display = "block";
+                            // } else {
+                            //     content.style.display = "none";
+                            // }
                         });
                     });
                 })
