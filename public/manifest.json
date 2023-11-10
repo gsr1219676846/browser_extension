@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Chrome App",
-  "description": "Chrome extension app demo",
+  "name": "Citation Browser Extension",
+  "description": "Chrome extension app",
   "version": "0.1",
-  "author": "qileq",
+  "author": "Steven, Urim",
   "icons": {
     "16": "logo192.png",
     "32": "logo192.png",

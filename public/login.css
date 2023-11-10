@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    width: 500px;
+    width: 400px;
     height: 500px;
     box-sizing: border-box;
     color: #333;
@@ -11,8 +11,8 @@ body {
 iframe {
     margin: 0;
     padding: 0;
-    width: 450px;
-    height: 500px;
+    width: 400px;
+    height: 450px;
     border: none;
 }
 
