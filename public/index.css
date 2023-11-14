@@ -1,3 +1,14 @@
+/* Define your dark and light theme styles here */
+body.dark-mode {
+    /* Dark theme styles */
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-mode .gray-area {
+    background-color: #333; /* 例如: #555 或 #707070 */
+}
+
 /* Toggle Switch Style */
 .theme-switch {
     position: fixed;
@@ -49,6 +60,13 @@ body {
     color: white;
     padding: 20px 0;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
 
 /* Navigation */
 .nav-button {

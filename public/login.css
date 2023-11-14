@@ -1,3 +1,9 @@
+/* Define your dark and light theme styles here */
+body.dark-mode {
+    /* Dark theme styles */
+    background-color: #333;
+}
+
 /* General Body Styling */
 body {
     font-family: 'Arial', sans-serif;
