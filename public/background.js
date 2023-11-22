@@ -12,7 +12,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             const email = data.email;
             const phone = data.phone;
 
-            // Now you can use the user data as needed
+            //use the user data
             console.log(`User info - Name: ${username}, Email: ${email}, Phone: ${phone}`);
         });
     } else if (request.themeChanged) {
@@ -34,12 +34,12 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 
 function updateTabTheme(theme) {
-    // 根據theme的值（'dark'或'light'）來更新標籤頁的主題
+    // Update the tab's theme based on the value of theme ('dark' or 'light')
     if (theme === 'dark') {
         document.body.classList.add('dark-mode');
-        // 其他改變dark模式的代碼
+        //Other code that changes dark mode
     } else {
         document.body.classList.remove('dark-mode');
-        // 其他改變light模式的代碼
+        //Other code that changes the light mode
     }
 }

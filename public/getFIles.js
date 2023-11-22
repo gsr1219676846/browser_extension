@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         icon.title = file;
 
                         icon.addEventListener('click', function() {
-                            // 传递用户名和文件名
+                            // Pass username and filename
                             chrome.windows.create({
                                 url: 'file_display_page.html?username=' + encodeURIComponent(username) + '&file=' + encodeURIComponent(file),
                                 type: 'popup',
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         fileContainer.appendChild(icon);
                         fileContainer.appendChild(label);
 
-                        // 创建删除按钮
+                        //Create delete button
                         var deleteButton = document.createElement('button');
                         deleteButton.textContent = 'Delete';
                         deleteButton.className = 'delete-button';
@@ -71,12 +71,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                         // Add click event listener for the fileContainer
                         fileContainer.addEventListener('click', function() {
-                            var content = label; // You can modify this to target a specific element if needed
-                            // if (content.style.display === "none") {
-                            //     content.style.display = "block";
-                            // } else {
-                            //     content.style.display = "none";
-                            // }
+                            var content = label; //Modify this to target a specific element if needed
+
                         });
                     });
                 })

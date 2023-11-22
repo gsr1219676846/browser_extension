@@ -1,4 +1,4 @@
-/* Define your dark and light theme styles here */
+/* Define dark and light theme styles */
 body.dark-mode {
     /* Dark theme styles */
     background-color: #000000;
@@ -6,7 +6,7 @@ body.dark-mode {
 }
 
 .dark-mode .gray-area {
-    background-color: #333; /* 例如: #555 或 #707070 */
+    background-color: #333;
 }
 
 /* Toggle Switch Style */
@@ -59,8 +59,8 @@ body {
 
 .button-container {
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* vertical center */
 }
 
 
@@ -114,19 +114,19 @@ body {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* 或根据需要调整间隙 */
+    gap: 10px; /* Or adjust the gap as needed */
 }
 
 
 .file-container {
-    flex: 1 0 30%; /* 每个文件容器占据大约三分之一的宽度 */
+    flex: 1 0 30%; /* Each file container occupies approximately one-third of the width */
     box-sizing: border-box;
-    padding: 5px; /* 根据需要调整内边距 */
-    text-align: center; /* 图标和文字居中对齐 */
-    /* 可以添加更多样式，如边框、背景色等 */
+    padding: 5px; /* Adjust padding as needed */
+    text-align: center; /* Align the icon and text in the center */
+    /* More styles can be added, such as borders, background colors */
 }
 
-/* 在 index.css 或类似的文件中 */
+/* refresh button */
 #refresh-button {
     padding: 10px 20px;
     background-color: #4a90e2;

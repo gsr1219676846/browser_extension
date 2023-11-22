@@ -4,16 +4,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const username = urlParams.get('username');
 
     if (fileName && username) {
-        // 創建一個指向 getFile.php 的 URL，傳遞用戶名和文件名作為參數
+        // Create a URL pointing to getFile.php, passing the username and filename as parameters
         const fileUrl = 'http://localhost:8080/loginsystem/getFile.php?username=' + encodeURIComponent(username) + '&file=' + encodeURIComponent(fileName);
 
-        // 創建一個 iframe 用於顯示 PDF
+        //Create an iframe to display PDF
         const iframe = document.createElement('iframe');
         iframe.style.width = '100%';
-        iframe.style.height = '600px'; // 或您希望的任何大小
+        iframe.style.height = '600px'; // or any size
         iframe.src = fileUrl;
 
-        // 將 iframe 添加到頁面上
+        //Add iframe to the page
         const contentContainer = document.getElementById('file-content');
         contentContainer.appendChild(iframe);
     } else {
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// 在其他標籤頁的JavaScript文件中
+
 document.addEventListener('DOMContentLoaded', function() {
     chrome.storage.local.get(['darkMode'], function(result) {
         var isDarkMode = result.darkMode || false;
@@ -32,21 +32,21 @@ document.addEventListener('DOMContentLoaded', function() {
 function updateTheme(darkMode) {
     if (darkMode) {
         document.body.classList.add('dark-mode');
-        // 其他改變dark模式的代碼
+        //Other code that changes dark mode
         document.body.classList.add('dark-mode');
-// 修改背景顏色和文字顏色
+        //Modify background color and text color
         document.body.style.backgroundColor = '#333';
         document.body.style.color = '#fff';
-// 也可以針對其他元素進行樣式調整
+        //adjust styles for other elements
 
     } else {
         document.body.classList.remove('dark-mode');
-        // 其他改變light模式的代碼
+        //Other code that changes the light mode
         document.body.classList.remove('dark-mode');
-// 重置背景和文字顏色
+        //Reset background and text colors
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = '#000';
-// 對其他元素進行相應的樣式調整
+        // Make corresponding style adjustments to other elements
 
     }
 }

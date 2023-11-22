@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Citation Browser Extension",
   "description": "Chrome extension app",
-  "version": "0.1.2",
+  "version": "1.0",
   "author": "Steven, Urim",
   "icons": {
     "16": "logo192.png",

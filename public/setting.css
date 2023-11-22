@@ -1,11 +1,11 @@
-/* Define your dark and light theme styles here */
+/* Define dark and light theme styles here */
 body.dark-mode {
     /* Dark theme styles */
     background-color: #333;
 
 }
 .dark-mode .gray-area {
-    background-color: #333; /* 例如: #555 或 #707070 */
+    background-color: #333;
 }
 .dark-mode .mode-text {
     color: #ffffff;
@@ -64,8 +64,8 @@ body {
 
 .button-container {
     display: flex;
-    justify-content: center; /* 水平居中 */
-    align-items: center; /* 垂直居中 */
+    justify-content: center;
+    align-items: center;
 }
 
 /* Navigation */

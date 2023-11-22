@@ -23,26 +23,26 @@ document.addEventListener('userLoggedIn', function() {
 });
 
 
-// 这段代码应该保持不变，它负责根据存储中的主题设置更新页面主题
+//Responsible for updating the page theme based on the theme settings in storage
 chrome.storage.local.get(['darkMode'], function(result) {
     updateTheme(result.darkMode);
 });
 
-// 监听来自其他组件的消息，如 background 或 popup
+// Listen for messages from other components, such as background or popup
 chrome.runtime.onMessage.addListener(function(message) {
     if (message.themeChanged) {
         updateTheme(message.darkMode);
     }
 });
 
-// 更新页面主题的函数
+// Function to update page theme
 function updateTheme(darkMode) {
     if (darkMode) {
         document.body.classList.add('dark-mode');
-        document.documentElement.setAttribute('data-theme', 'dark'); // 设置属性以使用 CSS 变量
+        document.documentElement.setAttribute('data-theme', 'dark'); // Set properties to use CSS variables
     } else {
         document.body.classList.remove('dark-mode');
-        document.documentElement.removeAttribute('data-theme'); // 移除属性以恢复亮模式的 CSS 变量
+        document.documentElement.removeAttribute('data-theme'); // CSS variable that removes properties to restore light mode
     }
 }
 

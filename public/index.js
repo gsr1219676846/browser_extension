@@ -1,11 +1,10 @@
-// 在其他標籤頁的JavaScript文件中
 document.addEventListener('DOMContentLoaded', function() {
     chrome.storage.local.get(['darkMode'], function(result) {
         var isDarkMode = result.darkMode || false;
         updateTheme(isDarkMode);
     });
     document.getElementById('refresh-button').addEventListener('click', function() {
-        loadFiles(); // 调用一个函数来重新加载文件列表
+        loadFiles(); // Call a function to reload the file list
     });
 });
 
@@ -33,7 +32,7 @@ function loadFiles() {
 
 function updateFileDisplay(files, username) {
     var container = document.querySelector('#preview-frame');
-    container.innerHTML = ''; // 清空当前的文件显示
+    container.innerHTML = ''; //Clear the current file display
 
     files.forEach(file => {
 
@@ -44,7 +43,7 @@ function updateFileDisplay(files, username) {
         icon.title = file;
 
         icon.addEventListener('click', function() {
-            // 传递用户名和文件名
+            // Pass username and filename
             chrome.windows.create({
                 url: 'file_display_page.html?username=' + encodeURIComponent(username) + '&file=' + encodeURIComponent(file),
                 type: 'popup',
@@ -68,7 +67,7 @@ function updateFileDisplay(files, username) {
         fileContainer.appendChild(icon);
         fileContainer.appendChild(label);
 
-        // 创建删除按钮
+        //Create delete button
         var deleteButton = document.createElement('button');
         deleteButton.textContent = 'Delete';
         deleteButton.className = 'delete-button';
@@ -84,12 +83,8 @@ function updateFileDisplay(files, username) {
 
         // Add click event listener for the fileContainer
         fileContainer.addEventListener('click', function() {
-            var content = label; // You can modify this to target a specific element if needed
-            // if (content.style.display === "none") {
-            //     content.style.display = "block";
-            // } else {
-            //     content.style.display = "none";
-            // }
+            var content = label; // Modify this to target a specific element if needed
+
         });
     });
 }
@@ -100,29 +95,30 @@ function updateFileDisplay(files, username) {
 function updateTheme(darkMode) {
     if (darkMode) {
         document.body.classList.add('dark-mode');
-        // 其他改變dark模式的代碼
+        //Other code that changes dark mode
         document.body.classList.add('dark-mode');
-// 修改背景顏色和文字顏色
+        //Modify background color and text color
         document.body.style.backgroundColor = '#333';
         document.body.style.color = '#fff';
         var grayAreas = document.querySelectorAll('.gray-area');
         grayAreas.forEach(function(area) {
-            area.style.backgroundColor = '#333'; // 例如: '#555'
+            area.style.backgroundColor = '#333';
         });
-// 也可以針對其他元素進行樣式調整
+        //Adjust styles for other elements
 
     } else {
         document.body.classList.remove('dark-mode');
-        // 其他改變light模式的代碼
+        //Other code that changes the light mode
         document.body.classList.remove('dark-mode');
-// 重置背景和文字顏色
+        //Reset background and text colors
         document.body.style.backgroundColor = '#fff';
         document.body.style.color = '#000';
         var grayAreas = document.querySelectorAll('.gray-area');
         grayAreas.forEach(function(area) {
-            area.style.backgroundColor = ''; // 移除inline樣式以恢復原始CSS定義
+            area.style.backgroundColor = '';
+            // Remove inline styles to restore original CSS definitions
         });
-// 對其他元素進行相應的樣式調整
+// Make corresponding style adjustments to other elements
 
     }
 }
@@ -139,7 +135,7 @@ function deleteFile(fileName, username) {
         .then(response => response.json())
         .then(data => {
             if (data.success) {
-                // 成功删除后，重新加载文件列表
+                // After successful deletion, reload the file list
                 loadFiles();
             } else {
                 console.error('Failed to delete file:', data.message);
