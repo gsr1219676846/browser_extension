@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         });
 
 
+
                         // Create a wrapper for the file icon and label
                         let fileContainer = document.createElement('div');
                         fileContainer.className = 'file-container';
@@ -53,6 +54,17 @@ document.addEventListener('DOMContentLoaded', function() {
                         // Add the icon and label to the fileContainer
                         fileContainer.appendChild(icon);
                         fileContainer.appendChild(label);
+
+                        // 创建删除按钮
+                        var deleteButton = document.createElement('button');
+                        deleteButton.textContent = 'Delete';
+                        deleteButton.className = 'delete-button';
+                        deleteButton.onclick = function() {
+                            deleteFile(file, username);
+                        };
+
+                        fileContainer.appendChild(deleteButton);
+                        container.appendChild(fileContainer);
 
                         // Add the fileContainer to the main container
                         container.appendChild(fileContainer);

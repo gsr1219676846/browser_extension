@@ -7,7 +7,9 @@ body.dark-mode {
 .dark-mode .gray-area {
     background-color: #333; /* 例如: #555 或 #707070 */
 }
-
+.dark-mode .mode-text {
+    color: #ffffff;
+}
 
 /* Light theme styles are the default */
 
@@ -40,11 +42,6 @@ body.dark-mode {
     --button-hover-bg-color: #777;
 }
 
-body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    /* ... rest of your body styles ... */
-}
 
 /* General Body Styling */
 body {
