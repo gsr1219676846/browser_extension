@@ -1,3 +1,16 @@
+/* 
+file_display.js
+- Handles the display of a specific file selected by the user.
+- Key functionalities include:
+  1. Extracting the 'file' and 'username' parameters from the URL to determine which file to display.
+  2. Creating an iframe element that points to 'getFile.php', using the extracted parameters to fetch and display the selected file (e.g., a PDF).
+  3. Implementing dark mode/light mode theme switch. It adjusts the webpage's theme based on the user's preference stored in chrome.storage.
+- The script also contains an updateTheme function, which dynamically changes the page's appearance by adding or removing 
+the 'dark-mode' class and modifying CSS properties like background color and text color.
+*/
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const urlParams = new URLSearchParams(window.location.search);
     const fileName = urlParams.get('file');

@@ -1,3 +1,17 @@
+/* 
+getFiles.js
+- Handles the retrieval and display of user-specific files within the extension.
+- Key functionalities include:
+  1. On document load, it fetches the current user's username from chrome.storage.
+  2. Makes an AJAX POST request to 'getFiles.php' with the username to retrieve an array of files associated with the user.
+  3. Processes the received file list and dynamically generates visual elements for each file. This includes creating icons, labels, and delete buttons for each file.
+  4. Each file icon is interactive, opening a popup with the file's content upon clicking.
+  5. Implements a delete functionality for each file, allowing users to remove files directly from the interface.
+- The script enhances user interaction by providing a clear and functional interface for managing and accessing files, including options for viewing and deleting files.
+*/
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Get the username from chrome.storage
     chrome.storage.local.get(['username'], function(result) {

@@ -1,3 +1,18 @@
+/* 
+index.js
+- Central script for the extension's main interface.
+- Responsibilities include:
+  1. Applying the user's theme preference (dark or light mode) stored in chrome.storage to the extension's main page.
+  2. Adding functionality to the 'refresh-button' to reload the file list, enhancing user interaction by allowing real-time update of the displayed files.
+  3. Defining and executing the loadFiles function, which fetches and displays the current user's files from 'getFiles.php'.
+  4. Implementing the updateFileDisplay function, which dynamically updates the page to show the current set of user files. This includes creating icons, labels, and delete buttons for each file, and setting up event listeners for viewing and deleting files.
+  5. Handling the theme switching by toggling the 'dark-mode' class on the body and adjusting corresponding CSS properties to change the page's appearance.
+  6. Incorporating a deleteFile function to allow users to remove files directly from the interface, sending requests to 'deleteFile.php' and updating the display upon successful deletion.
+- This script plays a crucial role in the user interface, providing functionalities for file management and visual customization.
+*/
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     chrome.storage.local.get(['darkMode'], function(result) {
         var isDarkMode = result.darkMode || false;

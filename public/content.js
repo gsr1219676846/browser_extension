@@ -1,3 +1,18 @@
+/*
+content.js
+- This script is injected into the content of a webpage and is responsible for various interactive features.
+- Features include:
+  1. Detecting when a user is logged in (through a 'userLoggedIn' event), extracting user data (username, email, phone)
+  from the DOM, and storing this information in chrome.storage for use by other parts of the extension.
+  2. Sending a message to the background script to open the index page once the user data is stored.
+  3. Handling theme updates by listening for theme change messages from other parts of the
+  extension (like background or popup scripts) and applying the theme (dark or light mode) to the webpage.
+- The script also contains the updateTheme function, which adds or removes the 'dark-mode' class from
+the document's body and sets or removes the 'data-theme' attribute from the document element, thereby changing the page's appearance based on the theme settings.
+*/
+
+
+
 console.log("content.js is loaded and running");
 
 document.addEventListener('userLoggedIn', function() {
